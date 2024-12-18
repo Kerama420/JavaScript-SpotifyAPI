@@ -1,33 +1,26 @@
 body {
     font-family: Arial, sans-serif;
- }
- 
- img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
- }
- 
- .list-group-item {
+  }
+  
+  .list-group-item {
     cursor: pointer;
- }
- 
- .btn-success {
-    background-color: #3b7d4a !important;
- }
- 
- .btn-success:hover {
-    background-color: #4daf64 !important;
- }
- 
- #track_details img {
-    width: 150px;
-    height: 150px;
- }
- 
- #custom_playlist, #favorites {
-    border: 1px solid #ddd;
-    padding: 15px;
-    min-height: 150px;
- }
- 
+  }
+  
+  .list-group-item img {
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .btn-primary {
+    background-color: #1db954;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1ed760;
+  }
+  
+  #track_details img {
+    margin-top: 10px;
+  }
+  

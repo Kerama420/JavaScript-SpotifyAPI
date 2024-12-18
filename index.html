@@ -3,42 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify Web API Assignment</title>
+  <title>Soundwave</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <div class="container">
-      <h1 class="text-center my-4">Spotify Web API Integration</h1>
-      <form>
-          <div class="form-group row">
-           <label for="search_input" class="col-sm-2 col-form-label">Search:</label>
-           <div class="col-sm-10">
-               <input type="text" id="search_input" class="form-control" placeholder="Enter a song or artist">
-           </div>
-       </div>
-          <button id="btn_submit" class="btn btn-success btn-block">Search Tracks</button>
-      </form>
-      <div class="row mt-4">
-          <div class="col-sm-6">
-              <h3>Tracks</h3>
-              <div class="list-group" id="track_list"></div>
-          </div>
-          <div class="col-sm-6">
-              <h3>Track Details</h3>
-              <div id="track_details"></div>
-          </div>
+    <h1 class="text-center my-4">Soundwave</h1>
+    <div class="form-group">
+      <input type="hidden" id="hidden_token">
+      <input type="text" id="search_input" class="form-control mb-3" placeholder="Search for a song or artist">
+      <button id="search_button" class="btn btn-primary btn-block">Search Tracks</button>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Search Results</h3>
+        <div class="list-group" id="track_list"></div>
       </div>
-      <div class="row mt-4">
-          <div class="col-sm-6">
-              <h3>Custom Playlist</h3>
-              <div id="custom_playlist"></div>
-          </div>
-          <div class="col-sm-6">
-              <h3>Favorites</h3>
-              <div id="favorites"></div>
-          </div>
+      <div class="col-md-6">
+        <h3>Track Details</h3>
+        <div id="track_details"></div>
       </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3>Create or View Playlists</h3>
+        <div id="custom_playlists"></div>
+      </div>
+      <div class="col-md-6">
+        <h3>Favorites</h3>
+        <div id="favorites"></div>
+      </div>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
