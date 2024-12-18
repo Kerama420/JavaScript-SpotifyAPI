@@ -1,35 +1,33 @@
-.btn.dropdown-toggle  {
-    width:150px;
-    text-align:left;
-}
-
-span.caret {
-    position: absolute;
-    left: 90%;
-    top: 45%;
-}
-
-label {
-    padding-top:5px;
-}
-
-.form-label {
-    padding-left:0px !important;
-}
-
-img {
-    width:140px;
-    height:140px;
-}
-
-.btn-success {
-    background-color: #3b7d4a!important;
-}
-
-.btn-success:hover {
-    background-color: #4daf64!important;
-}
-
-img.track {
-    border: 1px solid #8a8a8a;
-}
+body {
+    font-family: Arial, sans-serif;
+ }
+ 
+ img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+ }
+ 
+ .list-group-item {
+    cursor: pointer;
+ }
+ 
+ .btn-success {
+    background-color: #3b7d4a !important;
+ }
+ 
+ .btn-success:hover {
+    background-color: #4daf64 !important;
+ }
+ 
+ #track_details img {
+    width: 150px;
+    height: 150px;
+ }
+ 
+ #custom_playlist, #favorites {
+    border: 1px solid #ddd;
+    padding: 15px;
+    min-height: 150px;
+ }
+ 

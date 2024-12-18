@@ -1,46 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Web API Tutorial</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundwave</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    .list-group-item {
+      cursor: pointer;
+    }
+    .btn-success {
+      background-color: #3b7d4a !important;
+    }
+    .btn-success:hover {
+      background-color: #4daf64 !important;
+    }
+    #track_details img {
+      width: 150px;
+      height: 150px;
+    }
+    #custom_playlist, #favorites {
+      border: 1px solid #ddd;
+      padding: 15px;
+      min-height: 150px;
+    }
+  </style>
 </head>
 <body>
-    
-    <div class="container">        
-        <form action="">
-            <input type="hidden" id='hidden_token'>
-            <div class="col-sm-6 form-group row mt-4 px-0">
-                <label for="Genre" class="form-label col-sm-2">Genre:</label>
-                <select name="" id="select_genre" class="form-control form-control-sm col-sm-10">
-                    <option>Select...</option>                    
-                </select>
-            </div>
-            <div class="col-sm-6 form-group row px-0">
-                <label for="Genre" class="form-label col-sm-2">Playlists:</label>
-                <select name="" id="select_playlist" class="form-control form-control-sm col-sm-10">
-                    <option>Select...</option>                    
-                </select>
-            </div>                  
-            <div class="col-sm-6 row form-group px-0">
-                <button type="submit" id="btn_submit" class="btn btn-success col-sm-12">Search</button>
-            </div>          
-        </form>        
-        <div class="row">
-            <div class="col-sm-6 px-0">
-                <div class="list-group song-list">
-                    
-                </div>                                             
-            </div>
-            <div class="offset-md-1 col-sm-4" id="song-detail">                
-            </div>
-        </div>   
+  <div class="container">
+    <h1 class="text-center my-4">Soundwave</h1>
+    <form>
+      <input type="hidden" id="hidden_token">
+      <div class="form-group row">
+        <label for="Genre" class="col-sm-2 col-form-label">Genre:</label>
+        <div class="col-sm-10">
+          <select id="select_genre" class="form-control">
+            <option>Select...</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="search_input" class="col-sm-2 col-form-label">Search:</label>
+        <div class="col-sm-10">
+          <input type="text" id="search_input" class="form-control" placeholder="Enter a song or artist">
+        </div>
+      </div>
+      <button id="btn_submit" class="btn btn-success btn-block">Search Tracks</button>
+    </form>
+    <div class="row mt-4">
+      <div class="col-sm-6">
+        <h3>Tracks</h3>
+        <div class="list-group" id="track_list"></div>
+      </div>
+      <div class="col-sm-6">
+        <h3>Track Details</h3>
+        <div id="track_details"></div>
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="app.js" type="text/javascript"></script>
+    <div class="row mt-4">
+      <div class="col-sm-6">
+        <h3>Custom Playlist</h3>
+        <div id="custom_playlist"></div>
+      </div>
+      <div class="col-sm-6">
+        <h3>Favorites</h3>
+        <div id="favorites"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
